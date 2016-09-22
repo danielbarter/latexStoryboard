@@ -1,0 +1,41 @@
+#!/bin/bash
+
+if [ -e *.aux ]
+then
+  echo 'removing .aux files'
+  rm *.aux
+else
+  echo 'no .aux files'
+fi
+
+if [ -e *.log ]
+then
+  echo 'removing .log files'
+  rm *.log
+else
+  echo 'no .log files'
+fi
+
+if [ -e *.pdf ]
+then
+  echo 'removing .pdf files'
+  rm *.pdf
+else
+  echo 'no .pdf files'
+fi
+
+if [ -e *.bbl ]
+then 
+  echo 'removing .bbl files'
+  rm *.bbl
+else
+  echo 'no .bbl files'
+fi
+
+if [ -e *.blg ]
+then 
+  echo 'removing .blg files'
+  rm *.blg
+else
+  echo 'no .bbl files'
+fi

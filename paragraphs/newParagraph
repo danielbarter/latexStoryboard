@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#to use, run the script with name and description as arguments
+#example:
+#./newParagraph "daniel" "define a spherical structure"
+
+MAX=1000
+PREFIX="paragraph-"
+SUFFIX=".tex"
+
+for i in `seq 0 $MAX`
+do
+  FILE="$PREFIX$i$SUFFIX"
+  PARNUM=$i
+
+  if [ ! -e $FILE ]
+  then
+    break
+  fi
+done
+
+echo "\\p{$PARNUM}{$1}{$2}" > $FILE
+echo "created $FILE"

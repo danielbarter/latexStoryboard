@@ -1,0 +1,35 @@
+\documentclass[12pt]{amsart}
+\title{Title}
+\author{Authors}
+\date{\today}
+
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.5cm]{geometry} % set margins
+\usepackage{color}
+\usepackage{tikz}
+
+
+% #1 is paragraph number
+% #2 is writer
+% #3 paragraph description
+\newcommand{\p}[3] 
+  {{\tiny \noindent \textcolor{red}{PARAGRAPH=#1; NAME=#2; DESCRIPTION=#3}}}
+
+\begin{document}
+
+\begin{abstract}
+\input{paragraphs/paragraph-0.tex}
+\end{abstract}
+
+\maketitle
+
+
+\section{Introduction} \label{sec:Introduction}
+
+\input{paragraphs/paragraph-1.tex}
+
+\input{paragraphs/paragraph-2.tex}
+
+\bibliographystyle{alpha}
+\bibliography{bibliography}
+\end{document}
